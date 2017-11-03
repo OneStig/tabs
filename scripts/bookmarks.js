@@ -7,8 +7,8 @@ main(); //entrypoint
 
 function main() {
   bookmarks = [
-    new bookmark(1, "stackoverflow", "Stack Overflow", "https://stackoverflow.com/"),
-    new bookmark(2, "google", "Google", "https://google.com")
+    //new bookmark(1, "stackoverflow", "Stack Overflow", "https://stackoverflow.com/"),
+    //new bookmark(2, "google", "Google", "https://google.com")
   ];
 
   for (var i = 0; i < bookmarks.length; i++) {
