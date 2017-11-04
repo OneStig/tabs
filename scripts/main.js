@@ -3,6 +3,22 @@ var center = document.getElementById("ci");
 var w = $(window);
 var name = "";
 
+var quotes = [
+  "'We are all in the gutter, but some of us are looking at the stars.' -Oscar Wilde",
+  "'Be who you are and say what you feel, because those who mind don't matter and those who matter don't mind.' -Dr. Seuss",
+  "'You never know what worse luck your bad luck has saved you from.' -Cormac McCarthy",
+  "'Make your life a masterpiece; imagine no limitations on what you can be, have or do.' -Brian Tracy",
+  "'Life is sabout making an impact, not making an income.' -Kevin Kruse",
+  "'Whatever the mind of man can conceive and believe, it can achieve.' -Napoleon Hill",
+  "'Strive not to be a success, but rather to be of value.' -Albert Einstein",
+  "'You miss 100% of the shots you don't take.' -Wayne Gretzky",
+  "'I've missed more than 9000 shots in my career. I've lost almost 300 games. 26 times I've been trusted to take the game winning shot and missed. I've failed over and over and over again in my life. And that is why I succeed' -Michael Jordan",
+  "'Life is 10% what happens to me and 90% of how I react to it.' -Charles Swindoll",
+  "'Winning isn't everything, but wanting to win is.' -Vince Lombardi",
+  "'You can never cross the ocean until you have the courage to lose sight of the shore.' -Christopher Columbus",
+  "'When I let go of what I am, I become what I might be.' -Lao Tzu"
+];
+
 main(); //entrypoint
 
 w.keyup(function (event) {
@@ -50,11 +66,18 @@ function updateClock() {
 }
 
 function main() {
+  randomQuote();
   $(".hide").hide();
   $("#cen").fadeIn(2000);
   setInterval(updateClock, 1000);
 
   updateName();
+}
+
+function randomQuote() {
+  var quoteN = (Math.floor(Math.random() * (quotes.length + 1))) - 1;
+  console.log(quoteN);
+  document.getElementById("quote").innerHTML = quotes[quoteN];
 }
 
 function updateName() {

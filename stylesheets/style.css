@@ -1,14 +1,41 @@
+div {
+  background-color: transparent;
+}
+
+body {
+  background-image: url(../pics/pattern.png);
+}
+
+.quotes {
+  font-family: "Slabo 27px", serif;
+  font-size: 20px;
+}
+
+#quote {
+  font-size: 25px;
+}
+
 .buttonContainer {
   border-color: #000;
   border-width: 2px;
   border-radius: 50%;
 }
 
+.quotes {
+  left: 50%;
+  right: 50%;
+  position: absolute;
+  text-align: center;
+  width: 450px;
+  z-index: 100;
+
+  margin-left: -225px;
+}
+
 .centerItems {
   position: absolute;
   left: 50%;
   top: 50%;
-  background-color: white;
   z-index: 100;
 
   margin-top: -200px;
@@ -52,13 +79,25 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
+#name {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #000;
+  outline: none;
+  font-size: 20px;
+}
+
+#name: hover {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
 #searchBTN {
   border: 1px solid #000;
   text-align: center;
   background-color: transparent;
   font-size: 12px;
-  width: 50px;
-  height: 50px;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
   color: #000;
 }
