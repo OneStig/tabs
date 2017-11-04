@@ -30,7 +30,7 @@ w.keyup(function (event) {
 function googleSearch() {
   var searchItem = document.getElementById("searchBar").value;
   if (searchItem != "") {
-    var searchItem = "https://www.google.com/search?q=" + searchItem;
+    searchItem = "https://www.google.com/search?q=" + searchItem;
     window.location = searchItem;
   }
 }
