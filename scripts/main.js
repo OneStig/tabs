@@ -76,6 +76,9 @@ function main() {
 
 function randomQuote() {
   var quoteN = (Math.floor(Math.random() * (quotes.length + 1))) - 1;
+  if (quoteN < 0) {
+    quoteN = 0;
+  }
   console.log(quoteN);
   document.getElementById("quote").innerHTML = quotes[quoteN];
 }
