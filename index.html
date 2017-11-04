@@ -10,10 +10,20 @@
     <div id="bookmarks">
 
     </div>
-
-    <div class="centerItems" id="ci" style="display: none;">
-      <p id="clock" class="cl">00 : 00 : 00</p>
-      <p id="midday" class="cl">AM</p>
+    <div class="centerItems" style="display: none;" id="cen">
+      <div class="clock" id="ci">
+        <p id="clock" class="cl">00 : 00 : 00</p>
+        <p id="midday" class="cl">AM</p>
+      </div>
+      <div class="googleSearch">
+        <input placeholder="Google Search" type="text" id="searchBar" />
+        <input type="button" id="searchBTN" value="Search" onclick="googleSearch();" />
+      </div>
+      <div class="hello" style="opacity: 1;">
+        <p id="h">Hello<p>
+        <input type="text" id="name" class="hide"/>
+        <input type="button" id="searchBTN" class="hide" value="Submit" onclick="setName();"/>
+      </div>
     </div>
 
     <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>

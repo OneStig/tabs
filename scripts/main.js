@@ -1,7 +1,22 @@
 var clock = document.getElementById("clock"); //clock text object
 var center = document.getElementById("ci");
+var w = $(window);
 
 main(); //entrypoint
+
+w.keyup(function (event) {
+  if (event.which == 13) {
+    googleSearch();
+  }
+});
+
+function googleSearch() {
+  var searchItem = document.getElementById("searchBar").value;
+  if (searchItem != "") {
+    var searchItem = "https://www.google.com/search?q=" + searchItem;
+    window.location = searchItem;
+  }
+}
 
 function updateClock() {
   var d = new Date();
@@ -30,10 +45,11 @@ function updateClock() {
 
   time = hours + " : " + minutes + " : " + seconds;
   clock.innerHTML = time;
-  document.getElementById("mmidday").innerHTML = a;
+  document.getElementById("midday").innerHTML = a;
 }
 
 function main() {
-  $(".centerItems").fadeIn(2000);
+  $(".hide").hide();
+  $("#cen").fadeIn(2000);
   setInterval(updateClock, 1000);
 }
